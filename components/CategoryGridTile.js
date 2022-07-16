@@ -2,11 +2,13 @@ import { Pressable,ImageBackground, View, Alert, Text, StyleSheet, Platform } fr
 
 
 function CategoryGridTile({ title, url }) {
-
+  function pressableFunction(){
+    Alert.alert("Hello This is a new category grid")
+  }
  
   return (
     <View style={styles.gridItem}>
-      <Pressable
+      <Pressable onPress={pressableFunction}
         android_ripple={{ color: '#ccc' }}
         style={({ pressed }) => [
           styles.button,
