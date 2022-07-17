@@ -3,15 +3,17 @@ import * as React from 'react';
 import { Pressable,ImageBackground, View, Alert, Text, StyleSheet, Platform } from 'react-native';
 import { Audio } from 'expo-av';
 
-
 function CategoryGridTile({ title, url,soundLink }) {
   const [sound, setSound] = React.useState();
 
   async function playSound() {
+
    
-    console.log('Loading Sound');
     const { sound } = await Audio.Sound.createAsync(
-       require("../assets/pig.mp3")
+      {
+        uri:'https://ia800200.us.archive.org/3/items/favouritescenesshakespeare_1603_librivox/favouritescenes_03_shakespeare_128kb.mp3'
+      },
+      { shouldPlay: true }
     );
     setSound(sound);
 
