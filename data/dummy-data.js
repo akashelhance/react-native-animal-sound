@@ -1,8 +1,8 @@
 import Category from '../models/category';
 
 export const CATEGORIES = [
-  new Category('c1', 'Tiger', 'https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg',"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"),
-  new Category('c2', 'Lion', 'https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg','https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'),
+  new Category('c1', 'Tiger', 'https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg',"https://ia800200.us.archive.org/3/items/favouritescenesshakespeare_1603_librivox/favouritescenes_03_shakespeare_128kb.mp3"),
+  new Category('c2', 'Lion', 'https://cdn.britannica.com/29/150929-050-547070A1/lion-Kenya-Masai-Mara-National-Reserve.jpg','https://ia800200.us.archive.org/3/items/favouritescenesshakespeare_1603_librivox/favouritescenes_03_shakespeare_128kb.mp3'),
   new Category('c3', 'Cat', 'https://cdn.britannica.com/22/206222-050-3F741817/Domestic-feline-tabby-cat.jpg','https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'),
   new Category('c4', 'Dog', 'https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/02/KOA_Nassau_2697x1517.jpg?itok=iQEwihUn','https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'),
   new Category('c5', 'Elephant', 'https://cdn.britannica.com/02/152302-050-1A984FCB/African-savanna-elephant.jpg','pig.mp3'),

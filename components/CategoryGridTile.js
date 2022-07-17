@@ -11,7 +11,7 @@ function CategoryGridTile({ title, url,soundLink }) {
    
     const { sound } = await Audio.Sound.createAsync(
       {
-        uri:'https://ia800200.us.archive.org/3/items/favouritescenesshakespeare_1603_librivox/favouritescenes_03_shakespeare_128kb.mp3'
+        uri:soundLink
       },
       { shouldPlay: true }
     );
