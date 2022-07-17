@@ -1,14 +1,34 @@
+
+import * as React from 'react';
 import { Pressable,ImageBackground, View, Alert, Text, StyleSheet, Platform } from 'react-native';
+import { Audio } from 'expo-av';
 
 
-function CategoryGridTile({ title, url }) {
-  function pressableFunction(){
-    Alert.alert("Hello This is a new category grid")
+function CategoryGridTile({ title, url,soundLink }) {
+  const [sound, setSound] = React.useState();
+
+  async function playSound() {
+   
+    console.log('Loading Sound');
+    const { sound } = await Audio.Sound.createAsync(
+       require("../assets/pig.mp3")
+    );
+    setSound(sound);
+
+    console.log('Playing Sound');
+    await sound.playAsync({soundLink:soundLink}); 
   }
- 
+
+  React.useEffect(() => {
+    return sound
+      ? () => {
+          console.log('Unloading Sound');
+          sound.unloadAsync(); }
+      : undefined;
+  }, [sound]);
   return (
     <View style={styles.gridItem}>
-      <Pressable onPress={pressableFunction}
+      <Pressable onPress={playSound}
         android_ripple={{ color: '#ccc' }}
         style={({ pressed }) => [
           styles.button,
@@ -51,13 +71,14 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     flex: 1,
-    padding: 16,
+    padding: 2,
     borderRadius: 8,
     justifyContent: 'flex-end',
-    alignItems: 'center',
+    alignItems: 'flex-end',
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 26,
+    fontSize: 22,
+    
   },
 });

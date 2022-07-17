@@ -5,7 +5,7 @@ import { CATEGORIES } from '../data/dummy-data';
 
 function renderCategoryItem(itemData) {
   return (
-    <CategoryGridTile title={itemData.item.title} url={itemData.item.url} />
+    <CategoryGridTile title={itemData.item.title} url={itemData.item.url} soundLink ={itemData.item.soundLink} />
   );
 }
 

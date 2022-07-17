@@ -1,16 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet } from 'react-native';
+import { StyleSheet,ImageBackground } from 'react-native';
 import CategoriesScreen from './screens/CategoriesScreen';
+
+
 
 export default function App() {
   return (
+
+    
     <>
-      <StatusBar style='light' />
+     <ImageBackground
+        source={require('./assets/images/img.jpg')}
+        resizeMode="cover"
+        style={styles.rootScreen}
+        imageStyle={styles.backgroundImage}
+      >
+         <StatusBar style='light' />
       <CategoriesScreen />
+      </ImageBackground>
     </>
   );
 }
 
+
 const styles = StyleSheet.create({
-  container: {},
+  rootScreen: {
+    flex: 1,
+  },
+  backgroundImage: {
+    opacity: 0.77
+  }
 });
